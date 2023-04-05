@@ -1,4 +1,4 @@
-class HeaderElement extends HTMLElement {
+class AppBar extends HTMLElement {
 
   constructor() {
     super();
@@ -64,9 +64,15 @@ class HeaderElement extends HTMLElement {
       
       <header class="header">
         <h1 class="headerTitle">Foody | DJF</h1>
+        <nav>
+            <ul>
+                <li><a href="#cariMakanan">Cari Makanan</a></li>
+                <li><a href="#daftarMakanan">Daftar Makanan</a></li>
+            </ul>
+        </nav>
     </header>
     `;
   }
 }
 
-customElements.define('header-element', HeaderElement);
+customElements.define('app-bar', AppBar);
