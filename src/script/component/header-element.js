@@ -64,13 +64,6 @@ class HeaderElement extends HTMLElement {
       
       <header class="header">
         <h1 class="headerTitle">Foody | DJF</h1>
-        <nav>
-            <ul>
-                <li><a href="#input">Masukkan Data</a></li>
-                <li><a href="#search">Cari Data</a></li>
-                <li><a href="#searchData">Daftar Data</a></li>
-            </ul>
-        </nav>
     </header>
     `;
   }
