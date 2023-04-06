@@ -1,16 +1,15 @@
 class AppBar extends HTMLElement {
+    constructor() {
+        super();
+        this.shadowDOM = this.attachShadow({ mode: 'open' });
+    }
 
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
+    connectedCallback() {
+        this.render();
+    }
 
-  connectedCallback() {
-    this.render();
-  }
-
-  render() {
-    this.shadowDOM.innerHTML = `
+    render() {
+        this.shadowDOM.innerHTML = `
       <style>
       * {
       padding: 0;
@@ -21,19 +20,18 @@ class AppBar extends HTMLElement {
       header {
           padding-top: 20px;
           padding-bottom: 10px;
+          padding-left:20px;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: center;
-          background-color: #FF8C00;
       }
       
       .headerTitle {
-          color: white;
-          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          color: #FF8C00;
+          font-family: 'Cursive';
       }
       
       nav {
-          padding: 10px;
           position: sticky;
           top: 0;
       }
@@ -50,29 +48,38 @@ class AppBar extends HTMLElement {
       }
       
       nav a {
-          font-size: 18px;
-          font-weight: 400;
+          font-size: 20px;
           text-decoration: none;
-          color: white;
+          color: #FF8C00;
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       
       nav a:hover {
           font-weight: bold;
       }
+      @media screen and (max-width: 1200px){
+        header {
+          flex-direction: column;
+      }
+    }
+      @media screen and (max-width: 768px) {
+        header {
+          flex-direction: column;
+      }
+    }
       </style>
       
       <header class="header">
         <h1 class="headerTitle">Foody | DJF</h1>
         <nav>
             <ul>
-                <li><a href="#cariMakanan">Cari Makanan</a></li>
-                <li><a href="#daftarMakanan">Daftar Makanan</a></li>
+                <li><a href="#detail-content"">Beranda</a></li>
+                <li><a href="#inputData">Cari Menu</a></li>
             </ul>
         </nav>
     </header>
     `;
-  }
+    }
 }
 
 customElements.define('app-bar', AppBar);
