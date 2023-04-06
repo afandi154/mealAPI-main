@@ -21,7 +21,7 @@ class ContentAwal extends HTMLElement {
               align-content:center;
               height:350px;
           }
-          .content-description2{
+          .content-description{
               text-align: justify;
               padding-right: 20px;
               padding-left: 20px;
@@ -44,7 +44,11 @@ class ContentAwal extends HTMLElement {
               cursor: pointer;
               transition: all .15s ease-in;
           }
-          
+          @media screen and (max-width: 1000px){
+            content-description {
+              display: none;
+            }
+          }
           </style>
 
         <div class="detail-content" id="detail-content">

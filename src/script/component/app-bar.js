@@ -1,15 +1,15 @@
 class AppBar extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({ mode: 'open' });
-    }
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: "open" });
+  }
 
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.shadowDOM.innerHTML = `
+  render() {
+    this.shadowDOM.innerHTML = `
       <style>
       * {
       padding: 0;
@@ -18,12 +18,11 @@ class AppBar extends HTMLElement {
       }
       
       header {
-          padding-top: 20px;
-          padding-bottom: 10px;
-          padding-left:20px;
+          padding: 20px;
           display: flex;
           flex-direction: row;
           align-items: center;
+          justify-content: space-between;
       }
       
       .headerTitle {
@@ -79,7 +78,7 @@ class AppBar extends HTMLElement {
         </nav>
     </header>
     `;
-    }
+  }
 }
 
-customElements.define('app-bar', AppBar);
+customElements.define("app-bar", AppBar);

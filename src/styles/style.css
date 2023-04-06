@@ -7,7 +7,7 @@
 }
 
 h1 {
-  color: #FF8303;
+  color: #ff8303;
   text-align: center;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .card:hover {
-  opacity: 1
+  opacity: 1;
 }
 
 .overlay {
@@ -70,7 +70,7 @@ body {
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
 }
 
-input[type=text] {
+input[type="text"] {
   border: none;
   border-bottom: 2px solid rgb(248, 137, 137);
   height: 40px;
@@ -93,5 +93,5 @@ button {
 }
 
 button:hover {
-  opacity: 1
+  opacity: 1;
 }
